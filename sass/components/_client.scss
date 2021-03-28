@@ -1,0 +1,49 @@
+.client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients {
+  /* outline: 1px solid tomato; */
+  @extend %list;
+  display: flex;
+  margin-left: calc(-1 * $flex-gap);
+}
+
+.client__item {
+  /* outline: 1px solid teal; */
+  margin-left: $flex-gap;
+}
+
+.client__link {
+  /* outline: 1px solid sienna; */
+  margin-bottom: 30px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  width: 170px;
+  height: 90px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: currentColor;
+  transition: border 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  :focus {
+    border: 1px solid $accent-color;
+    cursor: pointer;
+    transition: border 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.client__logo {
+  fill: #afb1b8;
+
+  .client__link:hover &,
+  .client__link:focus & {
+    fill: $accent-color;
+    cursor: pointer;
+    transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
