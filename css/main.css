@@ -1,5 +1,5 @@
 .icon-check {
-  background-image: url(".../images/check.svg");
+  background-image: url("../images/check.svg");
 }
 
 /*! modern-normalize v0.6.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -265,6 +265,42 @@ summary {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.address {
+  font-style: normal;
 }
 
 .nav, .contact, .feature, .works, .team__card, .social--team, .clients, .footer__link, .social, .filters, .portfolio, .portfolio__link {
