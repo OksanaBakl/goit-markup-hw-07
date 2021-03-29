@@ -1,0 +1,16 @@
+@mixin centeredFlex($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
+
+$iconList: 'Vector', 'check';
+
+@mixin generateIcons($iconList) {
+  @each $iconName in $iconList {
+    .icon-#{$iconName} {
+      background-image: url('.../images/#{$iconName}.svg');
+    }
+  }
+}
+@include generateIcons(check);

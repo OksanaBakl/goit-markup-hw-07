@@ -60,10 +60,7 @@
 .social__ellipce--footer {
   width: 44px;
   height: 44px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
+  @include centeredFlex(inline-flex);
   margin-right: 9px;
   border-radius: 50%;
   padding: 12px;
@@ -106,9 +103,7 @@
   color: rgba(255, 255, 255, 0.3);
 }
 .form__btn--footer {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex(inline-flex);
 
   min-width: 200px;
   min-height: 50px;
