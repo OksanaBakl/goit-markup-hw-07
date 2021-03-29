@@ -22,6 +22,10 @@
   background-color: #ffffff;
 }
 
+.team__item:first-child {
+  margin-left: 0;
+}
+
 .team__name {
   color: $title-text-color;
   font-weight: 500;

@@ -13,8 +13,11 @@
 .client__item {
   /* outline: 1px solid teal; */
   margin-left: $flex-gap;
-}
 
+  &:first-child {
+    margin-left: 0;
+  }
+}
 .client__link {
   /* outline: 1px solid sienna; */
   margin-bottom: 30px;

@@ -34,7 +34,7 @@
   &__item {
     /* outline: 1px solid teal; */
     flex-basis: calc(100% / 4 - $flex-gap);
-    margin-left: $flex-gap;
+    // margin-left: $flex-gap;
   }
 
   &__image {

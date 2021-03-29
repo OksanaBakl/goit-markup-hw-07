@@ -20,6 +20,10 @@
   padding-right: 15px;
 }
 
+.container {
+  @extend %container;
+}
+
 h1,
 h2,
 h3,
