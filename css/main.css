@@ -267,10 +267,6 @@ summary {
   padding-right: 15px;
 }
 
-body {
-  font-family: var(--main-font);
-}
-
 h1,
 h2,
 h3,
@@ -289,6 +285,9 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
 }
 
 .link {
@@ -297,6 +296,9 @@ img {
 
 .list {
   list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 .address {
@@ -316,16 +318,6 @@ img {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
 }
 
 .form__btn {
@@ -422,6 +414,12 @@ p {
           justify-content: space-between;
 }
 
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .nav__link {
   display: block;
   padding-top: 32px;
@@ -442,10 +440,6 @@ p {
   transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav__item {
-  position: relative;
-}
-
 .nav__link.current::after {
   display: block;
   content: '';
@@ -460,8 +454,7 @@ p {
   opacity: 1;
 }
 
-.nav__link:hover,
-.nav__link:focus {
+.nav__link:hover, .nav__link:focus {
   color: #2196f3;
 }
 
@@ -475,8 +468,16 @@ p {
   margin-left: auto;
 }
 
+.nav__item {
+  position: relative;
+}
+
 .contact .nav__item + .nav__item {
   margin-left: 50px;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .nav__email,
@@ -494,16 +495,6 @@ p {
           align-items: baseline;
   -webkit-transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.nav .nav__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .nav__icon {
@@ -532,6 +523,15 @@ p {
 .nav__tel:hover,
 .nav__tel:focus {
   color: #2196f3;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: #212121;
+  padding-bottom: 50px;
 }
 
 body {
@@ -900,8 +900,8 @@ body {
 
 .feature__title {
   color: #212121;
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
 }
@@ -909,7 +909,6 @@ body {
 .feature__description {
   font-size: 14px;
   line-height: 1.71;
-  /* or 171% */
   padding-top: 10px;
 }
 
@@ -917,6 +916,7 @@ body {
   /* outline: 1px solid teal; */
   -ms-flex-preferred-size: calc(100% / 4 - $flex-gap);
       flex-basis: calc(100% / 4 - $flex-gap);
+  margin-left: 30px;
 }
 
 .feature__image {
@@ -939,18 +939,8 @@ body {
 }
 
 .section__works {
-  /* background-color: aqua; */
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.section__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  color: #212121;
-  padding-bottom: 50px;
 }
 
 .works {
@@ -987,7 +977,7 @@ body {
   overflow: hidden;
   font-family: Roboto;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
@@ -1368,14 +1358,6 @@ body {
       flex-wrap: wrap;
 }
 
-.button__filter.current {
-  color: #ffffff;
-  background-color: #2196f3;
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
-
 .button__filter {
   background-color: #f5f4fa;
   font-weight: 500;
@@ -1405,6 +1387,14 @@ body {
   background-color: #2196f3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button__filter.current {
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .container__filters {
